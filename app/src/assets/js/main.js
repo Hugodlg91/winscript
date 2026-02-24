@@ -8,6 +8,7 @@ import { ask, save, open } from "@tauri-apps/plugin-dialog";
 import { check } from "@tauri-apps/plugin-updater";
 import { relaunch } from "@tauri-apps/plugin-process";
 import { openUrl } from "@tauri-apps/plugin-opener";
+import { t, translateDOM } from "../../locales/i18n.js";
 
 async function getChangelog() {
   const response = await fetch("https://api.github.com/repos/flick9000/winscript/releases/latest");
@@ -163,6 +164,7 @@ getCurrentWindow().show();
 
 // Prevent context menu
 document.addEventListener("DOMContentLoaded", () => {
+  translateDOM();
   document.addEventListener("contextmenu", (e) => {
     e.preventDefault();
   });
@@ -435,8 +437,8 @@ document.querySelectorAll(".checkbox-wrapper").forEach((wrapper) => {
 // Run Button
 document.getElementById("runBtn").addEventListener("click", async function () {
   if (!restoreCheckbox.checked) {
-    let restoreAsk = await ask("Do you want to create a restore point?", {
-      title: "Restore Point",
+    let restoreAsk = await ask(t("Do you want to create a restore point?"), {
+      title: t("Restore Point"),
     });
     console.log("Restore Point: " + restoreAsk);
 

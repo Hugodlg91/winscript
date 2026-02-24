@@ -1,4 +1,4 @@
-# WinScript
+# WinScript (🇫🇷 French / English)
 
 [![Downloads](https://img.shields.io/github/downloads/flick9000/winscript/total?style=for-the-badge)](https://github.com/flick9000/winscript/releases)
 [![Release](https://img.shields.io/github/v/release/flick9000/winscript?style=for-the-badge&label=Latest%20release)](https://github.com/flick9000/winscript/releases/latest)
@@ -8,9 +8,14 @@
 WinScript is a powerful, simple to use & lightweight open-source tool designed to improve and customize your Windows experience. It offers a range of features, including debloating, privacy enhancement, performance optimization, and streamlined app installation.
 <br>
 
+> 🇫🇷 **Note:** This is a localized fork featuring a full **French (FR) translation** of the UI and generated scripts. All credits for the core tool go to the original author, [@flick9000](https://github.com/flick9000).
+
 ![App Screenshot](/website/public/winscript.webp)
 
 ## Features
+
+### 🌍 Bilingual Interface (English / French)
+Seamlessly switch between English and French directly from the sidebar. All UI elements, descriptions, and PowerShell outputs are fully translated to provide a native experience for French-speaking users.
 
 ### 🧹 Debloat
 WinScript allows you to remove any pre-installed bloatware and unnecessary component from Windows. You can uninstall Microsoft Store, OneDrive, CoPilot, debloat or remove Microsoft Edge, disable Widgets & Taskbar Widgets, disable Windows Features such as Recall or Consumer Features & many more.

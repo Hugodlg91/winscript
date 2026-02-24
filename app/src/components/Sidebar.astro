@@ -6,50 +6,65 @@
       <p><a target="_blank" href="https://github.com/flick9000/">github.com/flick9000</a></p>
     </div>
   </div>
-  <button id="uncheckAll">Uncheck All</button>
+  <button id="uncheckAll" data-i18n="Uncheck All">Uncheck All</button>
   <div class="sidebar-buttons">
-    <button id="importBtn">Import</button>
-    <button id="exportBtn">Export</button>
+    <button id="importBtn" data-i18n="Import">Import</button>
+    <button id="exportBtn" data-i18n="Export">Export</button>
   </div>
   <div class="sidebar-content">
     <div data-tab="tools-tab" class="sidebar-entry">
       <img src="icons/sidebar/tools.svg" alt="" />
-      <h1>Tools</h1>
+      <h1 data-i18n="Tools">Tools</h1>
     </div>
     <div data-tab="debloat-tab" class="sidebar-entry">
       <img src="icons/sidebar/debloat.ico" alt="" />
-      <h1>Debloat</h1>
+      <h1 data-i18n="Debloat">Debloat</h1>
     </div>
     <div data-tab="privacy-tab" class="sidebar-entry">
       <img src="icons/sidebar/privacy.svg" alt="" />
-      <h1>Privacy</h1>
+      <h1 data-i18n="Privacy">Privacy</h1>
     </div>
     <div data-tab="telemetry-tab" class="sidebar-entry">
       <img src="icons/sidebar/telemetry.svg" alt="" />
-      <h1>Telemetry</h1>
+      <h1 data-i18n="Telemetry">Telemetry</h1>
     </div>
     <div data-tab="gaming-tab" class="sidebar-entry">
       <img src="icons/sidebar/Gaming.png" alt="" />
-      <h1>Gaming</h1>
+      <h1 data-i18n="Gaming">Gaming</h1>
     </div>
     <div data-tab="performance-tab" class="sidebar-entry">
       <img src="icons/sidebar/todo.png" alt="" />
-      <h1>Performance</h1>
+      <h1 data-i18n="Performance">Performance</h1>
     </div>
     <div data-tab="miscellanous-tab" class="sidebar-entry">
       <img src="icons/sidebar/miscellanous.svg" alt="" />
-      <h1>Miscellanous</h1>
+      <h1 data-i18n="Miscellanous">Miscellanous</h1>
     </div>
     <div data-tab="install-tab" class="sidebar-entry">
       <img src="icons/sidebar/app.svg" alt="" />
-      <h1>Browse Apps</h1>
+      <h1 data-i18n="Browse Apps">Browse Apps</h1>
     </div>
     <hr />
     <div data-tab="script-tab" class="sidebar-entry">
       <img src="icons/sidebar/code.svg" alt="" />
-      <h1>Run Script</h1>
+      <h1 data-i18n="Run Script">Run Script</h1>
+    </div>
+    
+    <div class="language-selector" style="margin-top: 10px; padding: 0 8px;">
+      <select id="langSelect" onchange="window.setLang(this.value)" style="width: 100%; border-radius: 5px; padding: 4px; background: transparent; color: var(--text); border: 1px solid var(--muted);">
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+      </select>
     </div>
   </div>
+  
+  <script is:inline>
+    document.addEventListener("DOMContentLoaded", () => {
+      const lang = localStorage.getItem("lang") || "en";
+      const select = document.getElementById("langSelect");
+      if(select) select.value = lang;
+    });
+  </script>
 </div>
 
 <style>

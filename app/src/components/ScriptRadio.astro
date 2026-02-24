@@ -14,8 +14,8 @@ const { title, inputId, group, icon, description } = Astro.props;
   <div>
     {icon && <img src={icon} alt={title} />}
     <div>
-      <h1>{title}</h1>
-      {description && <p>{description}</p>}
+      <h1 data-i18n={title}>{title}</h1>
+      {description && <p data-i18n={description}>{description}</p>}
     </div>
   </div>
 
